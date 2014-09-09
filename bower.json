@@ -1,0 +1,27 @@
+{
+  "name": "tortuga",
+  "version": "0.1.0",
+  "homepage": "https://github.com/giodamelio/tortuga",
+  "authors": [
+    "Gio d'Amelio <giodamelio@gmail.com>"
+  ],
+  "description": "Turtle graphics in Javascript",
+  "main": "src/index.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "tortuga",
+    "turtle",
+    "graphics"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
