@@ -5,12 +5,29 @@
     <title>Simple Tortuga Example</title>
 </head>
 <body>
-    <div class="container"></div>
+    <div id="container"></div>
+
+    <!-- Include jQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js""></script>
 
     <!-- Include Tortuga -->
     <script src="../tortuga.js"></script>
+
+    <!-- Example script -->
     <script>
-        document.addEventListener('DOMContentLoaded', function(){
+        $(document).ready(function() {
+            // Create our canvas
+            var canvas = new Tortuga.Canvas({
+                container: "#container",
+                width: 500,
+                height: 500
+            });
+
+            // Create a turtle
+            var turtle = new Tortuga.Turtle();
+
+            // Add our turtle to our canvas
+            canvas.addTurtle(turtle);
         });
     </script>
 </body>
