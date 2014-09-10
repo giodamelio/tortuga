@@ -3,31 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>Simple Tortuga Example</title>
+    <style>
+        #canvas {
+            border: 1px solid black;
+        }
+    </style>
 </head>
 <body>
-    <div id="container"></div>
+    <canvas id="canvas" width="500" height="500"></canvas>
 
-    <!-- Include jQuery -->
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js""></script>
+    <!-- Include paper.js -->
+    <script src="/bower_components/paper/dist/paper-core.min.js"></script>
 
     <!-- Include Tortuga -->
-    <script src="../tortuga.js"></script>
+    <script src="../../dist/tortuga.js"></script>
 
     <!-- Example script -->
     <script>
-        $(document).ready(function() {
+        document.addEventListener("DOMContentLoaded", function() {        
             // Create our canvas
             var canvas = new Tortuga.Canvas({
-                container: "#container",
+                canvas: "#canvas",
                 width: 500,
                 height: 500
             });
 
             // Create a turtle
-            var turtle = new Tortuga.Turtle();
+            var turtle = new Tortuga.Turtle({
+                x: 250,
+                y: 250,
+                direction: 0
+            });
 
             // Add our turtle to our canvas
             canvas.addTurtle(turtle);
+
+            // Make our turtle draw forward 10 pixels
+            turtle.forward(50);
         });
     </script>
 </body>
