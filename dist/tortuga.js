@@ -66,6 +66,12 @@ module.exports = {
             // Update the canvas
             paper.view.draw();
         };
+
+        // Move turtle backward
+        self.backward = function(distance) {
+            // Backward is the opposite of forward
+            self.forward(-distance);
+        };
     }
 };
 
